@@ -2,7 +2,9 @@
 
 Voxel-grid downsampling to ~21% of key-frame points keeps nuScenes mAP within 0.005 of full density (0.2293 vs 0.2342); random sampling to 50% loses 0.019 (0.2156). **Detection was more sensitive to *how* points were removed than to *how many*.**
 
-![hero](assets/hero.png)
+![Bird's-eye views of one nuScenes-mini keyframe at four densities with mAP, above the resampling → PointPillars pipeline](assets/hero.png)
+
+**Figure 1.** One nuScenes-mini keyframe at each density (% of keyframe points), with PointPillars mAP from the 2-frame pilot. The upsampled panel was regenerated with the same parameters for illustration.
 
 ## Key result
 
@@ -63,6 +65,7 @@ Experiments were run with MMDetection3D on a team member's GPU server; the evalu
 - Resampled key frames: `3d_object_detection/downsampled_bin/`
 - Evaluation configs and metric JSONs: `3d_object_detection/results/<timestamp>/`
 - mAP bar chart: `python results/make_hero.py` (matplotlib only; writes `results/map_by_condition.png` from `results/NUMBERS.md` values; does not touch `assets/hero.png`)
+- BEV panels: `python scripts/render_fig_assets.py`
 
 ## Context
 
