@@ -62,7 +62,7 @@ Experiments were run with MMDetection3D on a team member's GPU server; the evalu
 - Point-cloud resampling (down/upsampling, `.npy → .bin`): `Upsanpling_DownSampling.ipynb`
 - Resampled key frames: `3d_object_detection/downsampled_bin/`
 - Evaluation configs and metric JSONs: `3d_object_detection/results/<timestamp>/`
-- Figure: `python results/make_hero.py` (matplotlib only; regenerates `assets/hero.png` from `results/NUMBERS.md` values)
+- mAP bar chart: `python results/make_hero.py` (matplotlib only; writes `results/map_by_condition.png` from `results/NUMBERS.md` values; does not touch `assets/hero.png`)
 
 ## Context
 

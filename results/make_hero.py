@@ -1,4 +1,4 @@
-"""Regenerate assets/hero.png from the numbers in results/NUMBERS.md (no model run needed).
+"""Regenerate results/map_by_condition.png (mAP bar chart) from the numbers in results/NUMBERS.md (no model run needed).
 
 Usage: python results/make_hero.py   (requires matplotlib)
 """
@@ -57,7 +57,6 @@ fig.text(0.01, 0.01, "N = 2 nuScenes-mini key frames, 1 run per condition. Value
          color=INK2, fontsize=8.5)
 fig.tight_layout(rect=(0, 0.03, 1, 1))
 
-out = Path(__file__).resolve().parents[1] / "assets" / "hero.png"
-out.parent.mkdir(exist_ok=True)
+out = Path(__file__).resolve().parent / "map_by_condition.png"
 fig.savefig(out, facecolor=SURFACE)
 print(out)
