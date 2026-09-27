@@ -26,8 +26,7 @@ from notebook cell 16 (`voxel_sizes = {1.0: 0.05, 0.5: 0.2, 0.25: 0.4}`).
 
 Source: `report.pdf` p.6, Figure 2 (embedded image; verbatim). Target point count 34,688 for
 both frames (notebook cell 19). GJ = Gaussian jittering σ = 0.02 (cell 19 call; the cell 18 function default is 0.01);
-VI = voxel interpolation, voxel 0.4 per report §3 (function default in notebook is 0.5; the
-call site for RS inputs is truncated in the notebook, so 0.4 is taken from the report).
+VI = voxel interpolation, voxel 0.4 (cell 19 call; the cell 18 function default is 0.5).
 
 | Condition | Input | mAP |
 |---|---|---|
