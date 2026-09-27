@@ -29,7 +29,7 @@ Pipeline: pick 2 nuScenes key frames → resample the key-frame points (`.bin`, 
    - Random: 100 / 50 / 25% of points.
    - Voxel grid (Open3D, features averaged per voxel): grid size 0.05 / 0.2 / 0.4, which keeps 67 / 35 / 21% of points.
 2. **Upsampling.** Restores the random 25% and 50% clouds to the original point count (cells 18–19):
-   - Gaussian jittering: duplicates points and adds σ = 0.01 noise.
+   - Gaussian jittering: duplicates points and adds σ = 0.02 noise.
    - Voxel interpolation: adds midpoints of point pairs within each voxel, grid 0.4.
 3. **Detector held fixed.** The nuScenes-pretrained PointPillars (`pointpillars_hv_secfpn_sbn-all_8xb4-2x_nus-3d`) ran on every condition with no fine-tuning. Any change in mAP therefore comes from the input alone.
 
